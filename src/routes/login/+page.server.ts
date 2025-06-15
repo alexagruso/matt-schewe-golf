@@ -29,14 +29,14 @@ export const actions: Actions = {
                     return fail(409, { error: "User is already logged in" });
                 } else {
                     await sessions.deleteOne(oldSession);
-                    event.cookies.delete("Session");
+                    event.cookies.delete("Session", { path: "/" });
                 }
             }
 
             const newSession = createSession(user.username);
 
             await sessions.insertMany(newSession);
-            event.cookies.set("Session", JSON.stringify(newSession));
+            event.cookies.set("Session", JSON.stringify(newSession), { path: "/" });
         } catch (error) {
             console.error(error);
             console.error("ERROR: failed to login");

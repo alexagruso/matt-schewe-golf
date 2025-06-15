@@ -45,6 +45,9 @@
                 <HighlightLink href="/lessons">Lessons</HighlightLink>
             </div>
             <div class="row link center">
+                <HighlightLink href="/testimonials">Testimonials</HighlightLink>
+            </div>
+            <div class="row link center">
                 <HighlightLink href="/blog">Blog</HighlightLink>
             </div>
         </div>
@@ -132,8 +135,6 @@
     }
 
     .links {
-        gap: 0.5rem;
-
         transition: all 500ms cubic-bezier(0.98, 0, 0.1, 0.98);
 
         @include tablet-and-below {

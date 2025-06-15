@@ -13,7 +13,7 @@
         transition: all 100ms;
 
         border-radius: 1rem;
-        padding: 0.5rem 2rem;
+        padding: 0.5rem 1.5rem;
 
         font-size: $navbar-link;
         font-weight: 600;

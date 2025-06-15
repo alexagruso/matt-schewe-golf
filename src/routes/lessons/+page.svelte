@@ -30,24 +30,25 @@
         </p>
     </div>
     <div class="col content">
-        <table>
-            <thead class="col">
-                <tr class="row">
-                    <th class="package">Lesson Package</th>
-                    <th class="youth-price">Youth Price</th>
-                    <th class="adult-price">Adult Price</th>
-                </tr>
-            </thead>
-            <tbody class="col">
+        <div class="table">
+            <div class="thead col">
+                <div class="tr row">
+                    <div class="th package">Lesson Package</div>
+                    <div class="th youth-price">Youth Price</div>
+                    <div class="th adult-price">Adult Price</div>
+                </div>
+            </div>
+            <div class="tbody col">
                 {#if data.rates}
                     {#each data.rates as rate}
                         <div class="entry col">
-                            <tr class="row">
-                                <td class="package">{rate.name}</td>
-                                <td class="youth-price"
-                                    >{rate.youthPrice ? `$${rate.youthPrice.toLocaleString()}` : "--"}</td>
-                                <td class="adult-price">${rate.adultPrice.toLocaleString()}</td>
-                            </tr>
+                            <div class="tr row">
+                                <div class="td package">{rate.name}</div>
+                                <div class="td youth-price">
+                                    {rate.youthPrice ? `$${rate.youthPrice.toLocaleString()}` : "--"}
+                                </div>
+                                <div class="td adult-price">${rate.adultPrice.toLocaleString()}</div>
+                            </div>
                             {#if $page.data.currentSession}
                                 <div class="col">
                                     <div class="actions row">
@@ -104,8 +105,8 @@
                         <h2>Failed to load rates, please check back later.</h2>
                     </div>
                 {/if}
-            </tbody>
-        </table>
+            </div>
+        </div>
         <h3 class="disclaimer">
             -- Indicates a lesson package that is unavailable. Lesson packages are non-refundable.
         </h3>
@@ -232,18 +233,18 @@
         }
     }
 
-    thead,
-    tbody {
+    .thead,
+    .tbody {
         box-shadow: 0rem 0.25rem 0.25rem 0rem rgba(black, 0.25);
     }
 
-    thead tr {
+    .thead .tr {
         color: $primary-6;
 
         background-color: $primary-2;
     }
 
-    th {
+    .th {
         padding: 0.5rem;
 
         font-size: $header-5;
@@ -251,7 +252,7 @@
         text-transform: uppercase;
     }
 
-    td {
+    .td {
         font-size: $header-4;
 
         padding: 1rem;
@@ -259,7 +260,7 @@
         text-align: left;
     }
 
-    tbody .entry:nth-child(2n-1) {
+    .tbody .entry:nth-child(2n-1) {
         background-color: mix($primary-5, white, 50%);
 
         button:not(:hover) {
@@ -267,7 +268,7 @@
         }
     }
 
-    tr {
+    .tr {
         align-items: center;
 
         .package {
