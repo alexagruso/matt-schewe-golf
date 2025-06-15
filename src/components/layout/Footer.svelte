@@ -39,7 +39,7 @@
             {:else}
                 <DarkButtonLink href="/login">Admin Login</DarkButtonLink>
             {/if}
-            <img src="images/navbar/pga.png" alt="pga logo" />
+            <img src="images/navbar/PGALogoNew.webp" alt="pga logo" />
         </div>
     </div>
 </footer>
@@ -111,6 +111,7 @@
 
         img {
             max-height: 4rem;
+            border-radius: 0.75rem;
         }
 
         @include tablet-and-below {

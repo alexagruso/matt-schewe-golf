@@ -14,7 +14,7 @@
             {#if $page.data.currentSession}
                 <h1>Logged in as {$page.data.currentSession.user}</h1>
             {:else}
-                <img src="images/navbar/pga.png" alt="pga logo" />
+                <img src="images/navbar/PGALogoNew.webp" alt="pga logo" />
                 <h1>Matt Schewe</h1>
             {/if}
         </div>
@@ -27,7 +27,7 @@
             {#if $page.data.currentSession}
                 <h1>Logged in as {$page.data.currentSession.user}</h1>
             {:else}
-                <img src="images/navbar/pga.png" alt="pga logo" />
+                <img src="images/navbar/PGALogoNew.webp" alt="pga logo" />
                 <div class="col text">
                     <span class="title">Matt Schewe</span>
                     <span class="subtitle">School of Golf</span>
@@ -174,5 +174,11 @@
         @include tablet-portrait {
             font-size: $header-4;
         }
+    }
+
+    img {
+        object-fit: contain;
+        width: 60px;
+        border-radius: 0.75rem;
     }
 </style>
