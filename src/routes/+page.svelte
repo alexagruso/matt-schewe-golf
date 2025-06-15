@@ -7,9 +7,9 @@
 
     const { data }: PageProps = $props();
 
-    let testimonial1: Testimonial;
-    let testimonial2: Testimonial;
-    let testimonial3: Testimonial;
+    let testimonial1: Testimonial | null = $state(null);
+    let testimonial2: Testimonial | null = $state(null);
+    let testimonial3: Testimonial | null = $state(null);
 
     if (data.testimonials) {
         data.testimonials.forEach((testimonial) => {
@@ -31,24 +31,30 @@
 <BlogSection />
 <h2>Testimonials</h2>
 <div class="testimonials row">
-    <div class="quote col">
-        <p>
-            {testimonial1.content}
-        </p>
-        <h3>- {testimonial1.name}</h3>
-    </div>
-    <div class="quote col">
-        <p>
-            {testimonial2.content}
-        </p>
-        <h3>- {testimonial2.name}</h3>
-    </div>
-    <div class="quote col">
-        <p>
-            {testimonial3.content}
-        </p>
-        <h3>- {testimonial3.name}</h3>
-    </div>
+    {#if testimonial1}
+        <div class="quote col">
+            <p>
+                {testimonial1.content}
+            </p>
+            <h3>- {testimonial1.name}</h3>
+        </div>
+    {/if}
+    {#if testimonial2}
+        <div class="quote col">
+            <p>
+                {testimonial2.content}
+            </p>
+            <h3>- {testimonial2.name}</h3>
+        </div>
+    {/if}
+    {#if testimonial3}
+        <div class="quote col">
+            <p>
+                {testimonial3.content}
+            </p>
+            <h3>- {testimonial3.name}</h3>
+        </div>
+    {/if}
 </div>
 
 <style lang="scss">
