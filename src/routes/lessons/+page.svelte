@@ -133,44 +133,44 @@
     </div>
 </section>
 <section class="col card contact">
-    <div class="col content">
-        <form class="col" action="?/email" method="post" on:submit={handleEmail} use:enhance>
-            <div class="input-group">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" placeholder="e.g. John Smith" required />
-            </div>
-            <div class="row sender-contact">
-                <div class="input-group">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" placeholder="e.g. john@email.com" required />
-                </div>
-
-                <div class="input-group">
-                    <label for="email">Phone</label>
-                    <input type="tel" name="phone" id="phone" placeholder="e.g. (123) 456-7890" required />
-                </div>
-            </div>
-            <div class="input-group">
-                <label for="content">Message</label>
-                <textarea name="content" id="content" placeholder="Message will be sent to Matt" required />
-            </div>
-            {#if allowEmailSubmission}
-                <button type="submit">Send Email</button>
-            {:else if form?.emailSuccess === true}
-                <h2>Email successfully sent.</h2>
-            {:else if form?.emailSuccess === false}
-                <h2>Email failed to send, please try again later.</h2>
-            {:else}
-                <h2>Sending email...</h2>
-            {/if}
-        </form>
-    </div>
+    <!-- <div class="col content"> -->
+    <!--     <form class="col" action="?/email" method="post" on:submit={handleEmail} use:enhance> -->
+    <!--         <div class="input-group"> -->
+    <!--             <label for="name">Name</label> -->
+    <!--             <input type="text" name="name" id="name" placeholder="e.g. John Smith" required /> -->
+    <!--         </div> -->
+    <!--         <div class="row sender-contact"> -->
+    <!--             <div class="input-group"> -->
+    <!--                 <label for="email">Email</label> -->
+    <!--                 <input type="email" name="email" id="email" placeholder="e.g. john@email.com" required /> -->
+    <!--             </div> -->
+    <!---->
+    <!--             <div class="input-group"> -->
+    <!--                 <label for="email">Phone</label> -->
+    <!--                 <input type="tel" name="phone" id="phone" placeholder="e.g. (123) 456-7890" required /> -->
+    <!--             </div> -->
+    <!--         </div> -->
+    <!--         <div class="input-group"> -->
+    <!--             <label for="content">Message</label> -->
+    <!--             <textarea name="content" id="content" placeholder="Message will be sent to Matt" required /> -->
+    <!--         </div> -->
+    <!--         {#if allowEmailSubmission} -->
+    <!--             <button type="submit">Send Email</button> -->
+    <!--         {:else if form?.emailSuccess === true} -->
+    <!--             <h2>Email successfully sent.</h2> -->
+    <!--         {:else if form?.emailSuccess === false} -->
+    <!--             <h2>Email failed to send, please try again later.</h2> -->
+    <!--         {:else} -->
+    <!--             <h2>Sending email...</h2> -->
+    <!--         {/if} -->
+    <!--     </form> -->
+    <!-- </div> -->
     <div class="col intro">
         <h1 class="title">Contact</h1>
         <p class="subtitle">
             Matt can be contacted through email at <span class="highlight">matt@mattschewegolf.com</span> or by phone at
-            <span class="highlight">(713) 291-8861</span>. Alternatively, he can be contacted by filling out and
-            submitting the contact form.
+            <span class="highlight">(713) 291-8861</span>. Be sure to include your phone number in any email correspondence
+            with him.
         </p>
     </div>
 </section>
@@ -302,6 +302,7 @@
     .highlight {
         font-weight: 700;
         text-decoration: underline;
+        display: inline-block;
     }
 
     form {
