@@ -26,7 +26,7 @@
         <h1 class="title">Lesson Rates</h1>
         <p class="subtitle">
             Matt offers several lesson packages, as well as discounts for youth lessons. To schedule a lesson, contact
-            Matt directly or fill out the contact form.
+            Matt directly using email or phone.
         </p>
     </div>
     <div class="col content">

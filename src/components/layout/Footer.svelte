@@ -1,6 +1,8 @@
 <script lang="ts">
     import DarkButtonLink from "@components/interactive/DarkButtonLink.svelte";
     import { page } from "$app/stores";
+
+    const currentYear = new Date().getFullYear();
 </script>
 
 <footer>
@@ -33,7 +35,7 @@
             </div>
         </div>
         <div class="row copyright">
-            <span>Copyright &copy; 2023 Matt Schewe. All Rights Reserved.</span>
+            <span>Copyright &copy; {currentYear} Matt Schewe. All Rights Reserved.</span>
             {#if $page.data.currentSession}
                 <DarkButtonLink href="/dashboard">Dashboard</DarkButtonLink>
             {:else}
